@@ -30,7 +30,14 @@ public class Vase extends Item {
     public int getHeight() {
         return height;
     }
-    
+
+     public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
     public void output(){
         System.out.println("Height: " + this.height);
         System.out.println("Material: " + this.material);
