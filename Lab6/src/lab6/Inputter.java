@@ -1,0 +1,77 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package lab6;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author chucken
+ */
+public class Inputter {
+    public static Scanner sc = new Scanner(System.in);
+    
+    public static int inputInt(int min, int max) {
+        return inputInt(min, max);
+    }
+    
+    public static int InputInt(String msg, int min, int max) {
+        if (min > max) {
+            int temp = min;
+            min = max;
+            max = temp;
+        }
+        
+        int data = Integer.MIN_VALUE;
+        
+        while (true) {
+            try {
+                if (msg != null) {
+                    System.out.println(msg);
+                }
+
+                data = Integer.parseInt(sc.nextLine());
+            } catch (NumberFormatException e) {
+            }
+
+            if (data >= min && data <= max) {
+                break;
+            }
+        }
+        return data;
+    }
+    
+    public static String inputStr() {
+        return inputStr(null);
+    }
+
+    public static String inputStr(String msg) {
+        if (msg != null) {
+            System.out.println(msg);
+        }
+
+        return sc.nextLine().trim();
+    }
+
+    public static String inputNonBlankStr(String msg) {
+        String str = null;
+
+        do {
+            str = inputStr(msg);
+        } while (str.isEmpty());
+
+        return str;
+    }
+
+    public static String inputPattern(String msg, String pattern) {
+        String str = null;
+
+        do {
+            str = inputStr(msg);
+        } while (!str.matches(pattern));
+
+        return str;
+    }
+}
