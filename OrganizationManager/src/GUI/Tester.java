@@ -22,34 +22,34 @@ public class Tester {
         
         // run grow of BeeColony
         obj1.grow();
-        // run reproduce of BeeColony
+       // run reproduce of BeeColony
         obj1.reproduce();
         
         System.out.println("");
         
         University obj2 = new FPTUniversity(100000, "FPT", "Cantho");
-        // go to toString of University, toString of FPTUniversity exist, run it
+      // go to toString of University, toString of FPTUniversity exist, run it
         System.out.println(obj2);
-        
+
         // run grow of University
         obj2.enroll();
-        // run grow of University
+         // run grow of University
         obj2.educate();
         
         System.out.println("");
 
         Role df = new BeeColony(3000, "wasp", "land");
-        // go to toString of BeeColony
+       // go to toString of BeeColony
         System.out.println(df);
-        // go to createWorker of BeeColony
+       // go to createWorker of BeeColony
         df.createWork();
         
         System.out.println("");
 
         df = new FPTUniversity(100000, "FPT", "Hanoi");
-        // go to toString of FPTUniversity
+     // go to toString of FPTUniversity
         System.out.println(df);
-        // go to createWorker of FPTUniversity
+     // go to createWorker of FPTUniversity
         df.createWork();
     }
 }
