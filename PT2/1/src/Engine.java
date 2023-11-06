@@ -20,7 +20,7 @@ public class Engine {
     }
 
     public String getDesigner() {
-        return designer.substring(0, 3).toLowerCase();
+        return  designer.substring(0,1).tolowerCase +designer.substring(1, 3);
     }
 
     public int getPower() {
